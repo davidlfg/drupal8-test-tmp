@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - test_register
+dependencies: {  }
+name: City
+vid: city
+description: 'Colombia cities'
+weight: 0

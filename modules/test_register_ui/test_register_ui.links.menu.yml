@@ -1,0 +1,5 @@
+test_register_ui.menu.register.collection:
+  title: 'Register'
+  parent: system.admin_structure
+  description: 'Test register'
+  route_name: entity.register.collection

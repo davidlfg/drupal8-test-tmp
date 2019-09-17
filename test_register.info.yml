@@ -1,0 +1,10 @@
+name: Test Register
+description: Drupal Test register App.
+type: module
+package: Test
+core: '8.x'
+dependencies:
+  - drupal:datetime
+  - drupal:options
+  - drupal:taxonomy
+  - drupal:telephone

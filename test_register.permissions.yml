@@ -1,0 +1,13 @@
+# Register entity
+
+view register:
+  title: 'View Register'
+
+update register:
+  title: 'Update Register'
+
+delete register:
+  title: 'Delete Register'
+
+create register:
+  title: 'Create Register'

@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Installation functions for Test Register module.
+ */
+
+use Drupal\test_register\PrepareData;
+
+/**
+ * Implements hook_install().
+ */
+function test_register_install() {
+  \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(PrepareData::class)
+    ->importCities('city');
+}

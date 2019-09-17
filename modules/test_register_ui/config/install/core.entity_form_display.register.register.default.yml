@@ -1,0 +1,76 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - telephone
+    - test_register
+id: register.register.default
+targetEntityType: register
+bundle: register
+mode: default
+content:
+  first_name:
+    type: string_textfield
+    label: above
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  last_name:
+    type: string_textfield
+    label: above
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  gender:
+    type: options_select
+    label: above
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  birthdate:
+    type: datetime_default
+    label: above
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  city:
+    type: options_select
+    label: above
+    weight: 4
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  phone_number:
+    type: telephone_default
+    region: content
+    weight: 5
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  address:
+    type: string_textfield
+    label: above
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  id:
+    type: number
+    label: above
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

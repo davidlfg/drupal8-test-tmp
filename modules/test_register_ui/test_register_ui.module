@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Hook implementations for Core UI.
+ */
+
+use Drupal\test_register_ui\BaseFieldDefinitionAlter;
+use Drupal\test_register_ui\RegisterEntityTypeAlter;
+use Drupal\Core\Entity\EntityTypeInterface;
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function test_register_ui_entity_type_alter(array &$entity_types) {
+  if (isset($entity_types['register'])) {
+    Drupal::service('class_resolver')
+      ->getInstanceFromDefinition(RegisterEntityTypeAlter::class)
+      ->alterEntityType($entity_types['register']);
+  }
+}
+
+/**
+ * Implements hook_entity_base_field_info_alter().
+ */
+function test_register_ui_entity_base_field_info_alter(&$fields, EntityTypeInterface $entity_type) {
+  if (in_array($entity_type->id(), ['register'])) {
+    $class = Drupal::service('class_resolver')
+      ->getInstanceFromDefinition(BaseFieldDefinitionAlter::class);
+    foreach ($fields as &$field) {
+      $class->processField($field);
+    }
+  }
+}

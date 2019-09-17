@@ -1,0 +1,7 @@
+name: Test register UI
+description: Provides a UI for managing the "Resgister" entity.
+type: module
+package: Test
+core: '8.x'
+dependencies:
+  - test_register:test_register
